@@ -16,9 +16,11 @@ import Login from "scenes/login";
 import Breakdown from "scenes/breakdown";
 import Station from "scenes/stations";
 import Wagon from "scenes/wagons";
+import BookingPrice from "scenes/bookingPrices"
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import WagonForm from "scenes/wagons/WagonForm";
+import FrequencyForm from "scenes/schedule/FrequencyForm";
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
@@ -45,6 +47,9 @@ function App() {
               <Route path="/stations" element={<Station />} />
               <Route path="/wagons" element={<Wagon />} />
               <Route path="/addwagon" element={<WagonForm />} />
+              <Route path="/addfrequency" element={<FrequencyForm />} />
+              <Route path="/bookingprices" element={<BookingPrice />} />
+
             </Route>
           </Routes>
         </ThemeProvider>
